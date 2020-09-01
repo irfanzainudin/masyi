@@ -60,6 +60,13 @@ button {
     font-size: calc(10px + 2vmin);
 }
 
+#home-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .home-elements {
     padding: 20px;
 }
@@ -88,16 +95,21 @@ button {
     width: 100vw;
 }
 
-#ayat {
-    font-size: 40px;
-    font-family: 'Scheherazade-Regular', 'Scheherazade', serif;
-}
-
-#home-buttons-container {
+.win-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.win-buttons {
+    padding: 1rem;
+    /* margin: 1rem 0; */
+}
+
+#ayat {
+    font-size: 40px;
+    font-family: 'Scheherazade-Regular', 'Scheherazade', serif;
 }
 
 .answer-btns {

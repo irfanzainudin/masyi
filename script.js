@@ -61,7 +61,7 @@ const attachHomeElements = () => {
     let bySurah = document.createElement('button');
     let oneLetter = document.createElement('button');
     let oneKalimah = document.createElement('button');
-    let about = document.createElement('button');
+    let aboutVar = document.createElement('button');
     let bySurahCode = document.createElement('code');
     let oneLetterCode = document.createElement('code');
     let oneKalimahCode = document.createElement('code');
@@ -79,7 +79,7 @@ const attachHomeElements = () => {
     setAttributes(oneKalimah, {
         class: "home-elements",
     });
-    setAttributes(about, {
+    setAttributes(aboutVar, {
         class: "home-elements",
     });
 
@@ -92,19 +92,19 @@ const attachHomeElements = () => {
     bySurah.onclick = () => bysurah();
     oneLetter.onclick = () => oneletter();
     oneKalimah.onclick = () => onekalimah();
-    about.onclick = () => about();
+    aboutVar.onclick = () => about();
 
     bySurah.appendChild(bySurahCode);
     oneLetter.appendChild(oneLetterCode);
     oneKalimah.appendChild(oneKalimahCode);
-    about.appendChild(aboutCode);
+    aboutVar.appendChild(aboutCode);
 
     appendChildren(homeBtnsDiv, {
         tl: tagline,
         bs: bySurah,
         ol: oneLetter,
         ok: oneKalimah,
-        ab: about,
+        ab: aboutVar,
     });
 
     app.appendChild(homeBtnsDiv);
@@ -514,32 +514,38 @@ const checkBySurah = (answer, correct, surahNumber) => {
 const winBySurah = () => {
     const winDiv = document.createElement('div');
     const congrats = document.createElement('h1');
-    const goBackHome = document.createElement('button');
     const playAgain = document.createElement('button');
+    const goBackHome = document.createElement('button');
 
     setAttributes(winDiv, {
-        class: "container",
+        class: "win-container",
+    });
+    setAttributes(playAgain, {
+        class: "win-buttons",
+    });
+    setAttributes(goBackHome, {
+        class: "win-buttons",
     });
 
     congrats.innerText = "Congratulations!";
-    goBackHome.innerText = "Home";
     playAgain.innerText = "Play Again";
+    goBackHome.innerText = "Home";
 
-    goBackHome.onclick = () => {
-        resetSC();
-        attachHomeElements();
-        removeContainerClass("container");
-    }
     playAgain.onclick = () => {
         resetSC();
         listOfSurah();
-        removeContainerClass("container");
+        removeContainerClass("win-container");
+    }
+    goBackHome.onclick = () => {
+        resetSC();
+        attachHomeElements();
+        removeContainerClass("win-container");
     }
 
     appendChildren(winDiv, {
         ct: congrats,
-        gb: goBackHome,
         pa: playAgain,
+        gb: goBackHome,
     });
 
     app.appendChild(winDiv);
@@ -653,32 +659,38 @@ const checkOneLetter = (answer, correct) => {
 const winOneLetter = () => {
     const winDiv = document.createElement('div');
     const congrats = document.createElement('h1');
-    const goBackHome = document.createElement('button');
     const playAgain = document.createElement('button');
+    const goBackHome = document.createElement('button');
 
     setAttributes(winDiv, {
-        class: "container",
+        class: "win-container",
+    });
+    setAttributes(playAgain, {
+        class: "win-buttons",
+    });
+    setAttributes(goBackHome, {
+        class: "win-buttons",
     });
 
     congrats.innerText = "Congratulations!";
-    goBackHome.innerText = "Home";
     playAgain.innerText = "Play Again";
+    goBackHome.innerText = "Home";
 
-    goBackHome.onclick = () => {
-        resetSC();
-        attachHomeElements();
-        removeContainerClass("container");
-    }
     playAgain.onclick = () => {
         resetSC();
         attachOneLetterElements();
-        removeContainerClass("container");
+        removeContainerClass("win-container");
+    }
+    goBackHome.onclick = () => {
+        resetSC();
+        attachHomeElements();
+        removeContainerClass("win-container");
     }
 
     appendChildren(winDiv, {
         ct: congrats,
-        gb: goBackHome,
         pa: playAgain,
+        gb: goBackHome,
     });
 
     app.appendChild(winDiv);
@@ -781,32 +793,38 @@ const checkOneKalimah = (answer, correct) => {
 const winOneKalimah = () => {
     const winDiv = document.createElement('div');
     const congrats = document.createElement('h1');
-    const goBackHome = document.createElement('button');
     const playAgain = document.createElement('button');
+    const goBackHome = document.createElement('button');
 
     setAttributes(winDiv, {
-        class: "container",
+        class: "win-container",
+    });
+    setAttributes(playAgain, {
+        class: "win-buttons",
+    });
+    setAttributes(goBackHome, {
+        class: "win-buttons",
     });
 
     congrats.innerText = "Congratulations!";
-    goBackHome.innerText = "Home";
     playAgain.innerText = "Play Again";
+    goBackHome.innerText = "Home";
 
-    goBackHome.onclick = () => {
-        resetSC();
-        attachHomeElements();
-        removeContainerClass("container");
-    }
     playAgain.onclick = () => {
         resetSC();
         attachOneKalimahElements();
-        removeContainerClass("container");
+        removeContainerClass("win-container");
+    }
+    goBackHome.onclick = () => {
+        resetSC();
+        attachHomeElements();
+        removeContainerClass("win-container");
     }
 
     appendChildren(winDiv, {
         ct: congrats,
-        gb: goBackHome,
         pa: playAgain,
+        gb: goBackHome,
     });
 
     app.appendChild(winDiv);

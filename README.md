@@ -2,7 +2,10 @@
 A web app to help with your Quran memorization
 
 ## Todo list
-### 
+### Second iteration
+- [ ] Fix Arabic font on Safari
+
+### First iteration
 - [x] Change Arabic font into a more modern one
 - [x] Fix Arabic encoding
 - [x] Make answer options different
