@@ -12,3 +12,6 @@ A web app to help with your Quran memorization
 - [x] Differentiate fathah and kasrah
 - [x] Make a session generator (10 questions per session maybe?)
 - [x] Add gap between lines of ayat to avoid overlapping (SOLVED by changing to modern fonts)
+
+## Supporters
+[![Stargazers repo roster for @irfanzainudin/masyi](https://reporoster.com/stars/irfanzainudin/masyi)](https://github.com/irfanzainudin/masyi/stargazers)
